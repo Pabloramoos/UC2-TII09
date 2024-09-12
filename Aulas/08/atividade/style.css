@@ -1,0 +1,23 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 5px 20px 5px 20px;
+    text-align: center;
+}
+nav ul {
+    color: white;
+    list-style-type: none;
+    padding: 0%;
+    text-align: center;
+}
+nav  ul li{
+    display: inline;
+    margin-right: 15px;
+}
+
+main{
+    background-color: indigo;
+    color: white;
+    padding: 20px;
+    margin: 15px;
+}

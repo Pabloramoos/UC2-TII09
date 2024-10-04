@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Grid</title>
+    <style>
+        .grid-container{
+            display: grid;/*Define o container como grid*/
+            grid-template-columns: 200px 200px 200px;/*Define duas colunas de 200px cada*/
+            grid-template-rows: 2fr 3fr;
+            gap: 10px;
+            background-color: lightblue;
+            height: 100vh;
+        }
+
+        .item{
+            background-color: steelblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item1 {
+            background-color: crimson;
+        }
+
+        .borda-redonda{
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item item3 borda-redonda">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+</body>
+</html>

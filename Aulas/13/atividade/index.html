@@ -17,32 +17,55 @@
             display: grid;
             grid-template-columns: 200px 1fr 200px;
             grid-template-rows: 100px 1fr 100px;
+            grid-template-areas:
+                "header header header"
+                "nav    main   aside"
+                "nav    main   anuncio"
+                "footer footer footer"
+            ;
+            gap: 10px;
             height: 100vh;
         }
 
         header{
-            grid-column: 1 / 4;
+            grid-area: header;
             background-color: lightblue;
         }
 
         nav {
-            grid-column: 1 / 2;
+            grid-area: nav;
             background-color: lightgreen;
         }
 
         main {
-            grid-column:  2/3;
+            grid-area: main;
             background-color: lightcoral;
         }
 
         aside {
-            grid-column: 3 / 4;
+            grid-area: aside;
             background-color: lightcyan;
+        }
+        .anuncio{
+            grid-area: anuncio;
+            background: darkred;
+
         }
 
         footer {
-            grid-column: 1 / 4;
+            grid-area: footer;
             background-color: lightpink;
+        }
+
+        @media (max-width: 700px) {
+            .grid-container{
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            header, nav, main, aside, footer{
+
+           }
         }
     </style>
 </head>
@@ -52,6 +75,7 @@
         <nav>Menu</nav>
         <main>Content</main>
         <aside>Sidebar</aside>
+        <div class="anuncio">Anuncio</div>
         <footer>Footer</footer>
     </div>
 </body>
